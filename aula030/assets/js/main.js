@@ -94,9 +94,4 @@
 
 const h1 = document.querySelector('.container h1')
 const data = new Date();
-const opcoes = {
-    dataStyle: 'full',
-    
-};
-
 h1.innerHTML = data.toLocaleString('pt-BR', {dateStyle: 'full' ,timeStyle:'short'});
