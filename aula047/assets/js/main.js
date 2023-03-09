@@ -19,25 +19,22 @@ function iniciaRelogio() {
 
 document.addEventListener('click', function(e) {
     const el = e.target;
-    
-    if (el.classList.contains('inciar')) {
-        relogio.classList.remove('pausado');
-        clearInterval(timer);
-        iniciaRelogio();
-        
-    }
-
 
     if (el.classList.contains('zerar')) {
-        clearInterval(timer);
+        clearInterval(timer)
         relogio.innerHTML = '00:00:00';
-        segundos = 0;
+        relogio.classList.remove('pausado');
+        segundos=0;
     }
-    
+
+    if (el.classList.contains('inciar')) {
+        relogio.classList.remove('pausado')
+        clearInterval(timer)
+        iniciaRelogio();
+    }
 
     if (el.classList.contains('pausar')) {
         clearInterval(timer);
-        relogio.classList.add('pausado');   
+        relogio.classList.add('pausado');
     }
-});
-
+})
