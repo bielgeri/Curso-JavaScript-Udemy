@@ -2,4 +2,5 @@
 
 addEventListener('click', function () {
     this.document.body.style.backgroundColor = 'green';
+    alert('Mudou para verde!')
 })
