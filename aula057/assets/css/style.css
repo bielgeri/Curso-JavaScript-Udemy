@@ -72,6 +72,7 @@ form button:hover {
     height: 40px;
     font-size: 1em;
     border: none;
+    border-radius: 6px;
     background-color: lightgrey;
     cursor: pointer;
 }
