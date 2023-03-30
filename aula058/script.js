@@ -2,7 +2,7 @@
 // Função fabrica ->
 // Construtora -> Pessoa (new)
 function Pessoa(nome, sobrenome) {
-    // Privadas
+    // Atributos ou metodos privados
     const ID = 123456;
     const metodoInterno = () => {
 
