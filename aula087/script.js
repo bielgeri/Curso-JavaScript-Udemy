@@ -6,31 +6,31 @@ function rand(min, max) {
 
 function esperaAi(msg, tempo) {
     return new Promise((resolve, reject) => {
-        if (typeof msg !== 'string') reject(false);
+
         setTimeout(() => {
-          resolve(msg);
-        resolve();
+          if (typeof msg !== 'string') {
+            reject('CAI NO ERRO FUI MLK.');
+            return;
+         }
+          resolve(msg.toUpperCase() + ' Passei na promise');
+          return;
         }, tempo)
     });
 }
 
-esperaAi('Conexão com o BD', rand(1, 3))
-  .then(resposta => {
-    console.log(resposta)
-    return esperaAi('Buscando dados da base', rand(1, 3));
-  })
-  .then(resposta => {
-    console.log(resposta)
-    return esperaAi(2222, rand(1,3))
-  })
-  .then(resposta => {
-    console.log(resposta)
-  })
-  .then(() => {
-    console.log('Exibe dados na tela')
-  })
-  .catch(e => {
-    console.log('ERRO:', e)
-  });
+// Promise.all Promise.race Promise.resolve Promise.reject
+function baixaPagina() {
+  const emCache = true;
 
-  console.log('Isso vai ser exibido antes do promisse')
+  if(emCache) {
+    return Promise.resolve('Pagina em cache');
+  } else {
+    return esperaAi('Baixei a página', 3000)
+  }
+}
+
+baixaPagina()
+ .then(dadosPagina => {
+  console.log(dadosPagina);
+ })
+ .catch(e => console.log('ERRO', e))
