@@ -7,8 +7,6 @@ class Pessoa {
 const nome = 'Gabriel';
 const sobrenome = 'Rodrigues';
 
-module.exports = {
-    nome, sobrenome, Pessoa
-};
-
+exports.nome = nome
+module.exports.sobrenome = sobrenome;
 exports.outrCoisa = 'Outra coisa'
