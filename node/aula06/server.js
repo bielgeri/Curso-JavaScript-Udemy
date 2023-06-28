@@ -18,11 +18,11 @@ app.get('/', (req, res) => {
 
 app.get('/contato', (req, res) => {
     res.send('Obrigado por entrar em contato com a gente!')
-})
+});
 
 app.post('/', (req, res) => {
     res.send('Recebi o formulário')
-})
+});
 
 app.listen(3000, () => {
     console.log('Acessar  https://localhost:3000')
