@@ -2,10 +2,10 @@ require('dotenv').config();
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
+mongoose.set('strictQuery', true);
 
 mongoose.connect(process.env.CONNECTIONSTRING)
   .then(() => {
-    console.log('Conectei a base de dados')
     app.emit('pronto')
   })
   .catch(e => console.log(e));
