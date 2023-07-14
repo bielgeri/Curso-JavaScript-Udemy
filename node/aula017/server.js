@@ -19,8 +19,11 @@ const {middleWareGlobal, checkCsrfError, csrfMiddleware} = require('./src/middle
 
 app.use(helmet());
 app.use(express.urlencoded({extended: true}));
+app.use(express.json());
 app.use(express.static(path.resolve(__dirname, 'public')))
 
+
+// Configuração de sessão
 const sessionOptions = session({
   secret: 'EU SOU UM RADIOCABEÇA IM CREEP WEIRDO',
   store: MongoStore.create({ mongoUrl: process.env.CONNECTIONSTRING }),
@@ -35,6 +38,8 @@ const sessionOptions = session({
 app.use(sessionOptions);
 app.use(flash());
  
+
+//Arquivos que renderizam a tela
 app.set('views', path.resolve(__dirname, 'src', 'views'));
 app.set('view engine', 'ejs')
 
