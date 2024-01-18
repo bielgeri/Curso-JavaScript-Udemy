@@ -32,6 +32,7 @@ module.exports = {
     "jsx-a11y/control-has-associated-label": "off",
     "import/no-extraneous-dependencies": "off",
     "import/no-duplicates": "off",
-    "no-const-assign": "off"
+    "no-const-assign": "off",
+    "react/forbid-prop-types": "off",
   },
 };
