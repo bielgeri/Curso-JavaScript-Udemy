@@ -25,5 +25,6 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'warn',
     'no-unused-vars': 'off',
     'import/no-extraneous-dependencies': 'off',
+    'jsx-a11y/anchor-is-valid': 'off',
   },
 };
